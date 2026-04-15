@@ -75,7 +75,7 @@ export function InstitucionalSection() {
           >
             A Loja Prática não é uma agência. Somos uma{' '}
             <strong style={{ color: '#E5E7EB', fontWeight: 500 }}>empresa de tecnologia</strong> que transforma
-            operações manuais em estruturas digitais escaláveis — com sites que vendem, automações que funcionam
+            operações manuais em estruturas digitais escaláveis  com sites que vendem, automações que funcionam
             e inteligência que cresce com você.
           </p>
 

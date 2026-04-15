@@ -44,8 +44,8 @@ const barConfigs = [
 ]
 
 export function CommerceGrowthMockup() {
-  const [animatedBars, setAnimatedBars] = useState(barConfigs.map((config) => config.initial))
-  const directionsRef = useRef(barConfigs.map((_, index) => (index % 2 === 0 ? 1 : -1)))
+  const [animatedBars, setAnimatedBars] = useState<number[]>(barConfigs.map((config) => config.initial))
+  const directionsRef = useRef<number[]>(barConfigs.map((_, index) => (index % 2 === 0 ? 1 : -1)))
 
   useEffect(() => {
     const interval = window.setInterval(() => {

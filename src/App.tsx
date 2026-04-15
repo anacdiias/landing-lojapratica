@@ -4,6 +4,7 @@ import { DoresSection } from './components/DoresSection'
 import { IAAtendimentoSection } from './components/IAAtendimentoSection'
 import { IATrafegoSection } from './components/IATrafegoSection'
 import { InstitucionalSection } from './components/InstitucionalSection'
+import { SiteTypesSection } from './components/SiteTypesSection'
 import { PlanosSection } from './components/PlanosSection'
 import { ProvasSocialSection } from './components/ProvasSocialSection'
 import { CTAFinalSection } from './components/CTAFinalSection'
@@ -21,6 +22,7 @@ export default function App() {
           <IAAtendimentoSection />
           <IATrafegoSection />
           <InstitucionalSection />
+          <SiteTypesSection />
           <PlanosSection />
           <ProvasSocialSection />
           <CTAFinalSection />
