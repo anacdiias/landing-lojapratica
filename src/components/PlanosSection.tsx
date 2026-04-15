@@ -176,6 +176,9 @@ export function PlanosSection() {
                 <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '13px', color: '#6B7280' }}>
                   {plan.period}
                 </div>
+                <p className="mt-3 text-xs" style={{ fontFamily: 'Manrope, sans-serif', color: '#ff2da3', lineHeight: 1.6 }}>
+                  *Desenvolvimento do site não incluso.
+                </p>
               </div>
 
               {/* Recursos */}
@@ -219,7 +222,7 @@ export function PlanosSection() {
           className={cn('text-center mt-10 text-sm animate-on-scroll delay-400', inView && 'in-view')}
           style={{ fontFamily: 'Manrope, sans-serif', color: '#6B7280' }}
         >
-          Todos os planos incluem acompanhamento contínuo para manter o site protegido e funcionando bem.{' '}
+          Todos os planos incluem acompanhamento contínuo para manter o site protegido e funcionando bem. {' '}
           <a href={buildWhatsAppLink('Olá! Tenho dúvidas sobre os planos da Loja Prática e quero falar com vocês.')} style={{ color: '#9CA3AF', textDecoration: 'underline' }}>
             Dúvidas? Fale com a gente.
           </a>
