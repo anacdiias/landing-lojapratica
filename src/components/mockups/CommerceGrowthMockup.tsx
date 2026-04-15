@@ -33,27 +33,33 @@ const routine = [
   'Mais agilidade no atendimento e nas campanhas',
 ]
 
-const initialBars = [42, 58, 54, 72, 68, 82, 94]
+const barConfigs = [
+  { initial: 40, min: 34, max: 84, delta: 4.2 },
+  { initial: 60, min: 48, max: 98, delta: 6.0 },
+  { initial: 54, min: 44, max: 92, delta: 4.6 },
+  { initial: 72, min: 60, max: 100, delta: 3.4 },
+  { initial: 66, min: 52, max: 94, delta: 4.0 },
+  { initial: 84, min: 70, max: 100, delta: 2.8 },
+  { initial: 92, min: 78, max: 100, delta: 1.8 },
+]
 
 export function CommerceGrowthMockup() {
-  const [animatedBars, setAnimatedBars] = useState(initialBars)
-  const directionsRef = useRef(initialBars.map(() => 1))
+  const [animatedBars, setAnimatedBars] = useState(barConfigs.map((config) => config.initial))
+  const directionsRef = useRef(barConfigs.map((_, index) => (index % 2 === 0 ? 1 : -1)))
 
   useEffect(() => {
     const interval = window.setInterval(() => {
       setAnimatedBars((currentBars) =>
         currentBars.map((value, index) => {
-          const min = 42
-          const max = 96
-          const delta = 4 + index
+          const { min, max, delta } = barConfigs[index]
           let direction = directionsRef.current[index]
           let next = value + direction * delta
 
           if (next >= max) {
-            next = max - 2
+            next = max - delta
             direction = -1
           } else if (next <= min) {
-            next = min + 2
+            next = min + delta
             direction = 1
           }
 
@@ -61,7 +67,7 @@ export function CommerceGrowthMockup() {
           return next
         }),
       )
-    }, 900)
+    }, 800)
 
     return () => window.clearInterval(interval)
   }, [])
