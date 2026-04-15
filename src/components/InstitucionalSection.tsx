@@ -16,7 +16,7 @@ function Stat({ value, suffix, label, delay, started }: {
       <div
         className="text-4xl md:text-5xl font-extrabold mb-2"
         style={{
-          fontFamily: 'Plus Jakarta Sans, sans-serif',
+          fontFamily: 'Sora, sans-serif',
           background: 'linear-gradient(135deg, #FF2DA3, #7C3AED)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
@@ -25,7 +25,7 @@ function Stat({ value, suffix, label, delay, started }: {
       >
         {count}{suffix}
       </div>
-      <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '15px', color: '#9CA3AF' }}>
+      <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '15px', color: '#9CA3AF' }}>
         {label}
       </div>
     </div>
@@ -41,7 +41,7 @@ export function InstitucionalSection() {
       className="relative section-padding overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #050814, #0A0E1A)' }}
     >
-      {/* Center glow */}
+      {/* Brilho central */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
@@ -53,12 +53,12 @@ export function InstitucionalSection() {
       />
 
       <div className="container-inner relative z-10">
-        {/* Main content */}
+        {/* Conteúdo principal */}
         <div className="max-w-[760px] mx-auto text-center mb-20">
           <h2
             className={cn('mb-6 animate-on-scroll', inView && 'in-view')}
             style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Sora, sans-serif',
               fontSize: 'clamp(28px, 4vw, 44px)',
               fontWeight: 700,
               color: '#F8FAFC',
@@ -71,7 +71,7 @@ export function InstitucionalSection() {
 
           <p
             className={cn('animate-on-scroll delay-100', inView && 'in-view')}
-            style={{ fontFamily: 'Inter, sans-serif', color: '#9CA3AF', lineHeight: 1.8, fontSize: '17px' }}
+            style={{ fontFamily: 'Manrope, sans-serif', color: '#9CA3AF', lineHeight: 1.8, fontSize: '17px' }}
           >
             A Loja Prática não é uma agência. Somos uma{' '}
             <strong style={{ color: '#E5E7EB', fontWeight: 500 }}>empresa de tecnologia</strong> que transforma
@@ -81,7 +81,7 @@ export function InstitucionalSection() {
 
           <p
             className={cn('mt-4 animate-on-scroll delay-200', inView && 'in-view')}
-            style={{ fontFamily: 'Inter, sans-serif', color: '#9CA3AF', lineHeight: 1.8, fontSize: '17px' }}
+            style={{ fontFamily: 'Manrope, sans-serif', color: '#9CA3AF', lineHeight: 1.8, fontSize: '17px' }}
           >
             Não entregamos templates. Entregamos{' '}
             <span style={{ color: '#E5E7EB' }}>estrutura</span>. Construímos{' '}
@@ -89,14 +89,14 @@ export function InstitucionalSection() {
           </p>
         </div>
 
-        {/* Stats grid */}
+        {/* Grade de estatísticas */}
         <div className="grid grid-cols-3 gap-8 max-w-[600px] mx-auto mb-16">
-          <Stat value={150} suffix="+" label="Clientes ativos" delay="delay-100" started={inView} />
+          <Stat value={275} suffix="+" label="Clientes ativos" delay="delay-100" started={inView} />
           <Stat value={320} suffix="+" label="Projetos entregues" delay="delay-200" started={inView} />
           <Stat value={98} suffix="%" label="Satisfação" delay="delay-300" started={inView} />
         </div>
 
-        {/* Decorative divider */}
+        {/* Divisor decorativo */}
         <div className="relative flex items-center justify-center">
           <div className="divider-gradient w-full" />
           <div
@@ -105,7 +105,7 @@ export function InstitucionalSection() {
           />
         </div>
 
-        {/* Feature tags */}
+        {/* Tags de recurso */}
         <div className={cn('flex flex-wrap justify-center gap-3 mt-12 animate-on-scroll delay-400', inView && 'in-view')}>
           {[
             'WordPress + WooCommerce',
@@ -122,7 +122,7 @@ export function InstitucionalSection() {
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 color: '#9CA3AF',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Manrope, sans-serif',
               }}
             >
               {tag}
@@ -133,3 +133,5 @@ export function InstitucionalSection() {
     </section>
   )
 }
+
+

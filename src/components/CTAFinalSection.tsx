@@ -1,6 +1,7 @@
 import { ArrowRight, Globe, Bot, TrendingUp } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import { cn } from '../lib/utils'
+import { buildWhatsAppLink } from '../lib/contact'
 
 const paths = [
   {
@@ -8,7 +9,7 @@ const paths = [
     title: 'Quero um site',
     subtitle: 'Presença digital profissional que vende',
     cta: 'Começar →',
-    href: 'https://wa.me/5500000000000?text=Olá!+Quero+um+site+profissional.',
+    href: buildWhatsAppLink('Olá! Quero um site profissional para minha loja.'),
     color: '#FF2DA3',
   },
   {
@@ -16,7 +17,7 @@ const paths = [
     title: 'Quero automação',
     subtitle: 'IA de atendimento e processos automáticos',
     cta: 'Começar →',
-    href: 'https://wa.me/5500000000000?text=Olá!+Quero+automatizar+meu+atendimento.',
+    href: buildWhatsAppLink('Olá! Quero automatizar e integrar o atendimento da minha loja.'),
     color: '#7C3AED',
   },
   {
@@ -24,7 +25,7 @@ const paths = [
     title: 'Quero crescer com IA',
     subtitle: 'Tráfego pago e conteúdo com inteligência artificial',
     cta: 'Começar →',
-    href: 'https://wa.me/5500000000000?text=Olá!+Quero+crescer+com+IA.',
+    href: buildWhatsAppLink('Olá! Quero crescer com tráfego pago e estratégia digital para minha loja.'),
     color: '#10B981',
   },
 ]
@@ -41,7 +42,7 @@ export function CTAFinalSection() {
         backgroundColor: '#050814',
       }}
     >
-      {/* Background decorations */}
+      {/* Decorações de fundo */}
       <div className="absolute inset-0 bg-dots opacity-50" />
       <div
         className="absolute inset-0 pointer-events-none"
@@ -50,16 +51,16 @@ export function CTAFinalSection() {
         }}
       />
 
-      {/* Top divider */}
+      {/* Divisor superior */}
       <div className="divider-gradient absolute top-0 left-0 right-0" />
 
       <div className="container-inner relative z-10">
-        {/* Header */}
+        {/* Cabeçalho */}
         <div className="text-center mb-16">
           <h2
             className={cn('mb-4 animate-on-scroll', inView && 'in-view')}
             style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Sora, sans-serif',
               fontSize: 'clamp(30px, 4.5vw, 52px)',
               fontWeight: 800,
               color: '#F8FAFC',
@@ -72,7 +73,7 @@ export function CTAFinalSection() {
           <p
             className={cn('animate-on-scroll delay-100', inView && 'in-view')}
             style={{
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'Manrope, sans-serif',
               fontSize: '17px',
               color: '#9CA3AF',
               maxWidth: '500px',
@@ -85,7 +86,7 @@ export function CTAFinalSection() {
           </p>
         </div>
 
-        {/* CTA cards */}
+        {/* Cartões de chamada */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {paths.map((path, i) => {
             const Icon = path.icon
@@ -100,7 +101,7 @@ export function CTAFinalSection() {
                 )}
                 style={{ textDecoration: 'none' }}
               >
-                {/* Icon */}
+                {/* Ícone */}
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                   style={{
@@ -111,11 +112,11 @@ export function CTAFinalSection() {
                   <Icon size={28} style={{ color: path.color }} />
                 </div>
 
-                {/* Title */}
+                {/* Título */}
                 <h3
                   className="mb-2"
                   style={{
-                    fontFamily: 'Plus Jakarta Sans, sans-serif',
+                    fontFamily: 'Sora, sans-serif',
                     fontSize: '20px',
                     fontWeight: 700,
                     color: '#F8FAFC',
@@ -124,18 +125,18 @@ export function CTAFinalSection() {
                   {path.title}
                 </h3>
 
-                {/* Subtitle */}
+                {/* Subtítulo */}
                 <p
                   className="mb-6 flex-1"
-                  style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', color: '#9CA3AF', lineHeight: 1.6 }}
+                  style={{ fontFamily: 'Manrope, sans-serif', fontSize: '14px', color: '#9CA3AF', lineHeight: 1.6 }}
                 >
                   {path.subtitle}
                 </p>
 
-                {/* CTA button */}
+                {/* Botão de chamada */}
                 <span
                   className="inline-flex items-center gap-2 font-semibold text-sm transition-all duration-200 group-hover:gap-3"
-                  style={{ color: path.color, fontFamily: 'Inter, sans-serif' }}
+                  style={{ color: path.color, fontFamily: 'Manrope, sans-serif' }}
                 >
                   {path.cta}
                   <ArrowRight size={15} />
@@ -145,17 +146,17 @@ export function CTAFinalSection() {
           })}
         </div>
 
-        {/* WhatsApp main CTA */}
+        {/* Chamada principal do WhatsApp */}
         <div className={cn('text-center animate-on-scroll delay-400', inView && 'in-view')}>
           <a
-            href="https://wa.me/5500000000000?text=Olá!+Quero+saber+mais+sobre+a+Loja+Prática."
+            href={buildWhatsAppLink('Olá! Quero falar com um especialista e entender a melhor solução para minha loja.')}
             className="btn-primary"
             style={{ fontSize: '17px', padding: '17px 40px' }}
           >
             Falar com um especialista agora
             <ArrowRight size={20} />
           </a>
-          <p className="mt-4 text-sm" style={{ color: '#6B7280', fontFamily: 'Inter, sans-serif' }}>
+          <p className="mt-4 text-sm" style={{ color: '#6B7280', fontFamily: 'Manrope, sans-serif' }}>
             Resposta em até 2 horas em horário comercial
           </p>
         </div>
@@ -163,3 +164,5 @@ export function CTAFinalSection() {
     </section>
   )
 }
+
+

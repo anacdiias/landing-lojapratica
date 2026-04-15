@@ -2,12 +2,13 @@ import { ArrowRight, Check } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import { cn } from '../lib/utils'
 import { ChatMockup } from './mockups/ChatMockup'
+import { buildWhatsAppLink } from '../lib/contact'
 
 const benefits = [
-  'Responde dúvidas automaticamente, qualquer hora do dia',
-  'Qualifica leads antes de chegarem para você',
-  'Integra com WhatsApp, Instagram e e-mail',
-  'Histórico completo de conversas em painel único',
+  'Atendimento integrado no TikTok',
+  'Respostas centralizadas no Messenger',
+  'Chat no site para captar e atender visitantes em tempo real',
+  'WhatsApp conectado ao fluxo de atendimento',
 ]
 
 export function IAAtendimentoSection() {
@@ -20,49 +21,50 @@ export function IAAtendimentoSection() {
       className="relative section-padding overflow-hidden"
       style={{ background: '#050814' }}
     >
-      {/* Glow */}
+      {/* Brilho */}
       <div className="glow-purple" style={{ width: '500px', height: '500px', right: '-100px', top: '50%', transform: 'translateY(-50%)' }} />
 
       <div className="container-inner relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Text column */}
+          {/* Coluna de texto */}
           <div>
             <div className={cn('badge-brand mb-6 animate-on-scroll', inView && 'in-view')}>
-              Automação Inteligente
+              Atendimento e Integração
             </div>
 
             <h2
               className={cn('mb-6 animate-on-scroll delay-100', inView && 'in-view')}
               style={{
-                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontFamily: 'Sora, sans-serif',
                 fontSize: 'clamp(28px, 3.5vw, 44px)',
                 fontWeight: 700,
                 color: '#F8FAFC',
                 lineHeight: 1.2,
               }}
             >
-              Atendimento 24/7{' '}
+              Seus canais conectados{' '}
               <br />
-              <span className="gradient-text">sem contratar mais pessoas</span>
+              <span className="gradient-text">em um só atendimento</span>
             </h2>
 
             <p
               className={cn('mb-8 animate-on-scroll delay-200', inView && 'in-view')}
               style={{
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Manrope, sans-serif',
                 fontSize: '17px',
                 color: '#9CA3AF',
                 lineHeight: 1.75,
               }}
             >
-              Implantamos uma IA de atendimento que responde clientes, qualifica leads e resolve
-              dúvidas frequentes — automaticamente, no WhatsApp, Instagram e e-mail.
+              Estruturamos o atendimento da sua empresa para funcionar de forma integrada no
+              TikTok, Messenger, chat do site e WhatsApp, com mais agilidade e menos perda de
+              oportunidades.
               <br /><br />
-              Você para de ficar refém do celular e começa a receber leads{' '}
-              <span style={{ color: '#E5E7EB' }}>já qualificados, prontos para fechar.</span>
+              Assim, o cliente encontra sua marca no canal que preferir e você mantém a operação{' '}
+              <span style={{ color: '#E5E7EB' }}>mais organizada, rápida e profissional.</span>
             </p>
 
-            {/* Benefits list */}
+            {/* Lista de benefícios */}
             <ul className={cn('space-y-4 mb-10 animate-on-scroll delay-300', inView && 'in-view')}>
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3">
@@ -72,7 +74,7 @@ export function IAAtendimentoSection() {
                   >
                     <Check size={11} style={{ color: '#FF2DA3' }} strokeWidth={3} />
                   </div>
-                  <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '15px', color: '#E5E7EB', lineHeight: 1.6 }}>
+                  <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '15px', color: '#E5E7EB', lineHeight: 1.6 }}>
                     {benefit}
                   </span>
                 </li>
@@ -81,19 +83,19 @@ export function IAAtendimentoSection() {
 
             <div className={cn('animate-on-scroll delay-400', inView && 'in-view')}>
               <a
-                href="https://wa.me/5500000000000?text=Olá!+Quero+automatizar+meu+atendimento."
+                href={buildWhatsAppLink('Olá! Quero integrar o atendimento da minha loja no TikTok, Messenger, chat do site e WhatsApp.')}
                 className="btn-primary"
               >
-                Quero automatizar meu atendimento
+                Quero integrar meu atendimento
                 <ArrowRight size={18} />
               </a>
             </div>
           </div>
 
-          {/* Visual column */}
+          {/* Coluna visual */}
           <div className={cn('flex justify-center lg:justify-end animate-on-scroll delay-200', inView && 'in-view')}>
             <div className="relative">
-              {/* Glow behind chat */}
+              {/* Brilho atrás do chat */}
               <div
                 className="absolute inset-0 rounded-3xl pointer-events-none"
                 style={{
@@ -104,7 +106,7 @@ export function IAAtendimentoSection() {
               />
               <ChatMockup />
 
-              {/* Floating stat badge */}
+              {/* Selo flutuante de estatística */}
               <div
                 className="absolute -right-4 -bottom-4 rounded-xl px-4 py-3"
                 style={{
@@ -114,14 +116,14 @@ export function IAAtendimentoSection() {
                 }}
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold gradient-text" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                  <span className="text-lg font-bold gradient-text" style={{ fontFamily: 'Sora, sans-serif' }}>
                     89%
                   </span>
                   <div>
-                    <div className="text-xs font-medium" style={{ color: '#E5E7EB', fontFamily: 'Inter, sans-serif' }}>
+                    <div className="text-xs font-medium" style={{ color: '#E5E7EB', fontFamily: 'Manrope, sans-serif' }}>
                       menos tempo
                     </div>
-                    <div className="text-xs" style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}>
+                    <div className="text-xs" style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}>
                       no atendimento
                     </div>
                   </div>
@@ -134,3 +136,5 @@ export function IAAtendimentoSection() {
     </section>
   )
 }
+
+

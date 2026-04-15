@@ -14,17 +14,17 @@ export function MetricsMockup() {
         boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
       }}
     >
-      {/* Header */}
+      {/* Cabeçalho */}
       <div
         className="px-5 py-4"
         style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', background: 'rgba(5,8,20,0.7)' }}
       >
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-sm font-bold" style={{ color: '#F8FAFC', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+            <div className="text-sm font-bold" style={{ color: '#F8FAFC', fontFamily: 'Sora, sans-serif' }}>
               Performance IA
             </div>
-            <div className="text-xs mt-0.5" style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}>
+            <div className="text-xs mt-0.5" style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}>
               Campanhas otimizadas automaticamente
             </div>
           </div>
@@ -37,7 +37,7 @@ export function MetricsMockup() {
         </div>
       </div>
 
-      {/* Big ROI number */}
+      {/* Número grande de ROI */}
       <div className="px-5 pt-5 pb-3">
         <div className="flex items-end gap-2 mb-1">
           <span
@@ -46,24 +46,24 @@ export function MetricsMockup() {
               background: 'linear-gradient(135deg, #FF2DA3, #7C3AED)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Sora, sans-serif',
             }}
           >
             +340%
           </span>
-          <span className="text-sm mb-1.5" style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}>ROI médio</span>
+          <span className="text-sm mb-1.5" style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}>ROI médio</span>
         </div>
-        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)', fontFamily: 'Inter, sans-serif' }}>
+        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)', fontFamily: 'Manrope, sans-serif' }}>
           vs. campanhas sem otimização por IA
         </div>
       </div>
 
-      {/* Campaign bars */}
+      {/* Barras de campanha */}
       <div className="px-5 pb-4 space-y-3">
         {campaigns.map((c) => (
           <div key={c.name}>
             <div className="flex items-center justify-between mb-1.5">
-              <span className="text-xs truncate" style={{ color: '#E5E7EB', fontFamily: 'Inter, sans-serif' }}>
+              <span className="text-xs truncate" style={{ color: '#E5E7EB', fontFamily: 'Manrope, sans-serif' }}>
                 {c.name}
               </span>
               <span className="text-xs font-medium ml-2" style={{ color: c.color }}>
@@ -83,7 +83,7 @@ export function MetricsMockup() {
         ))}
       </div>
 
-      {/* Bottom stats */}
+      {/* Estatísticas inferiores */}
       <div
         className="grid grid-cols-3 gap-px"
         style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.04)' }}
@@ -94,10 +94,10 @@ export function MetricsMockup() {
           { label: 'Otimizações', value: '247/dia' },
         ].map((s) => (
           <div key={s.label} className="p-3 text-center" style={{ background: 'rgba(5,8,20,0.5)' }}>
-            <div className="text-sm font-bold" style={{ color: '#F8FAFC', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+            <div className="text-sm font-bold" style={{ color: '#F8FAFC', fontFamily: 'Sora, sans-serif' }}>
               {s.value}
             </div>
-            <div className="text-xs mt-0.5" style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}>
+            <div className="text-xs mt-0.5" style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}>
               {s.label}
             </div>
           </div>
@@ -106,3 +106,5 @@ export function MetricsMockup() {
     </div>
   )
 }
+
+

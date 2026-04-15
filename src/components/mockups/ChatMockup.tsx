@@ -16,7 +16,7 @@ export function ChatMockup() {
         boxShadow: '0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03)',
       }}
     >
-      {/* Chat header */}
+      {/* Cabeçalho do chat */}
       <div
         className="flex items-center gap-3 px-4 py-3"
         style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', background: 'rgba(5,8,20,0.8)' }}
@@ -28,12 +28,12 @@ export function ChatMockup() {
           LP
         </div>
         <div>
-          <div className="text-sm font-semibold" style={{ color: '#F8FAFC', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+          <div className="text-sm font-semibold" style={{ color: '#F8FAFC', fontFamily: 'Sora, sans-serif' }}>
             IA Loja Prática
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs" style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}>Ativo 24/7</span>
+            <span className="text-xs" style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}>Ativo 24/7</span>
           </div>
         </div>
         <div className="ml-auto text-xs px-2 py-1 rounded-full" style={{ background: 'rgba(16,185,129,0.12)', color: '#10B981' }}>
@@ -41,7 +41,7 @@ export function ChatMockup() {
         </div>
       </div>
 
-      {/* Messages */}
+      {/* Mensagens */}
       <div className="p-4 space-y-3" style={{ minHeight: '260px' }}>
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -55,7 +55,7 @@ export function ChatMockup() {
                   ? '1px solid rgba(255,45,163,0.25)'
                   : '1px solid rgba(255,255,255,0.07)',
                 color: msg.from === 'user' ? '#F8FAFC' : '#E5E7EB',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Manrope, sans-serif',
                 lineHeight: '1.5',
                 borderRadius: msg.from === 'user' ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
               }}
@@ -65,7 +65,7 @@ export function ChatMockup() {
           </div>
         ))}
 
-        {/* Typing indicator */}
+        {/* Indicador de digitação */}
         <div className="flex items-center gap-1 px-1">
           {[0, 1, 2].map((i) => (
             <div
@@ -80,14 +80,14 @@ export function ChatMockup() {
         </div>
       </div>
 
-      {/* Input bar */}
+      {/* Barra de entrada */}
       <div
         className="flex items-center gap-2 px-3 py-3 mx-3 mb-3 rounded-xl text-xs"
         style={{
           background: 'rgba(255,255,255,0.04)',
           border: '1px solid rgba(255,255,255,0.08)',
           color: 'rgba(255,255,255,0.3)',
-          fontFamily: 'Inter, sans-serif',
+          fontFamily: 'Manrope, sans-serif',
         }}
       >
         <span className="flex-1">Digite sua mensagem...</span>
@@ -111,3 +111,5 @@ export function ChatMockup() {
     </div>
   )
 }
+
+

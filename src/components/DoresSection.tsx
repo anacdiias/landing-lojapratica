@@ -45,11 +45,11 @@ export function DoresSection() {
       className="relative section-padding overflow-hidden"
       style={{ background: '#0A0E1A' }}
     >
-      {/* Background grid */}
+      {/* Grade de fundo */}
       <div className="absolute inset-0 bg-dots opacity-40" />
 
       <div className="container-inner relative z-10">
-        {/* Header */}
+        {/* Cabeçalho */}
         <div className="text-center mb-16">
           <p className={cn('section-label mb-4 animate-on-scroll', inView && 'in-view')}>
             O problema que você conhece bem
@@ -57,7 +57,7 @@ export function DoresSection() {
           <h2
             className={cn('animate-on-scroll delay-100', inView && 'in-view')}
             style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Sora, sans-serif',
               fontSize: 'clamp(26px, 4vw, 44px)',
               fontWeight: 700,
               color: '#F8FAFC',
@@ -79,7 +79,7 @@ export function DoresSection() {
               key={dor.title}
               className={cn('glass-card p-8 animate-on-scroll', inView && 'in-view', `delay-${(i + 1) * 100 + 100}`)}
             >
-              {/* Icon */}
+              {/* Ícone */}
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
                 style={{
@@ -90,11 +90,11 @@ export function DoresSection() {
                 {dor.icon}
               </div>
 
-              {/* Title */}
+              {/* Título */}
               <h3
                 className="mb-3"
                 style={{
-                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontFamily: 'Sora, sans-serif',
                   fontSize: '20px',
                   fontWeight: 600,
                   color: '#F8FAFC',
@@ -104,10 +104,10 @@ export function DoresSection() {
                 {dor.title}
               </h3>
 
-              {/* Body */}
+              {/* Corpo do texto */}
               <p
                 style={{
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'Manrope, sans-serif',
                   fontSize: '15px',
                   color: '#9CA3AF',
                   lineHeight: 1.7,
@@ -120,9 +120,11 @@ export function DoresSection() {
           ))}
         </div>
 
-        {/* Divider */}
+        {/* Divisor */}
         <div className="divider-gradient mt-20" />
       </div>
     </section>
   )
 }
+
+

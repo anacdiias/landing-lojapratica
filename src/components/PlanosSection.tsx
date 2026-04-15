@@ -1,65 +1,66 @@
 import { ArrowRight, Check, Zap } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import { cn } from '../lib/utils'
+import { buildWhatsAppLink } from '../lib/contact'
 
 const plans = [
   {
     name: 'Start',
-    subtitle: 'Para quem está começando e precisa de presença digital profissional',
-    price: 'R$ 1.997',
-    period: 'pagamento único',
+    subtitle: 'Ideal para quem precisa do essencial para manter o site seguro e funcionando.',
+    price: 'R$ 99,90',
+    period: '/mês',
     featured: false,
     badge: null,
     features: [
-      'Site WordPress profissional',
-      'Design responsivo mobile-first',
-      'Até 5 páginas/seções',
-      'Formulário de contato integrado',
-      'Botão WhatsApp flutuante',
-      'SEO básico on-page',
-      '30 dias de suporte pós-entrega',
+      'Certificado SSL',
+      'Suporte via WhatsApp',
+      'Backup de segurança a cada 15 dias',
+      'Monitoramento básico do site',
+      'Sem integração com inteligência artificial',
     ],
-    cta: 'Começar',
-    ctaHref: 'https://wa.me/5500000000000?text=Olá!+Tenho+interesse+no+plano+Start.',
+    cta: 'Escolher Start',
+    ctaHref: buildWhatsAppLink('Olá! Tenho interesse no Plano Start da Loja Prática.'),
   },
   {
-    name: 'Pro',
-    subtitle: 'Para quem quer vender mais com tecnologia e automação integradas',
-    price: 'R$ 3.997',
-    period: 'pagamento único',
+    name: 'Plus',
+    subtitle: 'Para empresas que desejam mais proteção, desempenho e integração com redes sociais.',
+    price: 'R$ 149,90',
+    period: '/mês',
     featured: true,
     badge: 'Mais popular',
     features: [
-      'Tudo do plano Start +',
-      'Landing page de alta conversão',
-      'IA de atendimento no WhatsApp',
-      'Integração com CRM',
-      'SEO on-page completo',
-      'Automação de e-mail e leads',
-      'Tráfego pago gerenciado por IA',
-      '60 dias de suporte pós-entrega',
+      'Tudo do Plano Start, mais:',
+      'Inteligência artificial de proteção ao site',
+      'Backup de segurança a cada 7 dias',
+      'Antivírus',
+      'Velocidade aumentada do site',
+      'Integração com Instagram Feed no rodapé',
+      'Postagens do Instagram atualizadas automaticamente no site',
+      'Instagram Shop',
+      'Sacolinha do Instagram',
     ],
-    cta: 'Escolher Pro',
-    ctaHref: 'https://wa.me/5500000000000?text=Olá!+Tenho+interesse+no+plano+Pro.',
+    cta: 'Escolher Plus',
+    ctaHref: buildWhatsAppLink('Olá! Tenho interesse no Plano Plus da Loja Prática.'),
   },
   {
-    name: 'Scale',
-    subtitle: 'Para negócios que querem operação digital completa e escalável',
-    price: 'Sob consulta',
-    period: 'projeto personalizado',
+    name: 'Premium',
+    subtitle: 'Nosso plano mais completo, pensado para lojas que buscam mais performance, proteção e prioridade no suporte.',
+    price: 'R$ 219,90',
+    period: '/mês',
     featured: false,
     badge: null,
     features: [
-      'Tudo do plano Pro +',
-      'Meta + Google Ads simultâneos',
-      'Criação de conteúdo com IA',
-      'Monitoramento e segurança 24/7',
-      'Relatórios mensais de performance',
-      'Reuniões de estratégia mensais',
-      'Suporte prioritário sem prazo',
+      'Tudo do Plano Plus, mais:',
+      'TikTok Shop',
+      'Integração com sistemas de loja',
+      'Melhor desempenho no PageSpeed',
+      'SEO aplicado dentro do código do site',
+      'Suporte prioritário',
+      'Backup de segurança a cada 24 horas',
+      '4 inteligências artificiais para proteção anti-hacker e anti-bot',
     ],
-    cta: 'Falar com especialista',
-    ctaHref: 'https://wa.me/5500000000000?text=Olá!+Quero+saber+sobre+o+plano+Scale.',
+    cta: 'Escolher Premium',
+    ctaHref: buildWhatsAppLink('Olá! Tenho interesse no Plano Premium da Loja Prática.'),
   },
 ]
 
@@ -75,7 +76,7 @@ export function PlanosSection() {
     >
       <div className="absolute inset-0 bg-dots opacity-40" />
 
-      {/* Glow center */}
+      {/* Brilho central */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
@@ -87,30 +88,30 @@ export function PlanosSection() {
       />
 
       <div className="container-inner relative z-10">
-        {/* Header */}
+        {/* Cabeçalho */}
         <div className="text-center mb-16">
           <h2
             className={cn('mb-4 animate-on-scroll', inView && 'in-view')}
             style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Sora, sans-serif',
               fontSize: 'clamp(28px, 4vw, 44px)',
               fontWeight: 700,
               color: '#F8FAFC',
               lineHeight: 1.2,
             }}
           >
-            Escolha a estrutura certa{' '}
-            <span className="gradient-text">para o seu momento</span>
+            Planos mensais para manter seu site{' '}
+            <span className="gradient-text">seguro, rápido e integrado</span>
           </h2>
           <p
             className={cn('animate-on-scroll delay-100', inView && 'in-view')}
-            style={{ fontFamily: 'Inter, sans-serif', fontSize: '17px', color: '#9CA3AF', maxWidth: '480px', margin: '0 auto' }}
+            style={{ fontFamily: 'Manrope, sans-serif', fontSize: '17px', color: '#9CA3AF', maxWidth: '480px', margin: '0 auto' }}
           >
-            Planos pensados para escalar com você — do primeiro site à operação digital completa.
+            Escolha o nível de proteção, desempenho e integração ideal para a fase atual do seu negócio.
           </p>
         </div>
 
-        {/* Plans grid */}
+        {/* Grade dos planos */}
         <div className="grid lg:grid-cols-3 gap-6 items-stretch">
           {plans.map((plan, i) => (
             <div
@@ -133,7 +134,7 @@ export function PlanosSection() {
                     }
               }
             >
-              {/* Featured badge */}
+              {/* Selo em destaque */}
               {plan.badge && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                   <div className="badge-brand" style={{ fontSize: '11px', padding: '4px 14px' }}>
@@ -143,11 +144,11 @@ export function PlanosSection() {
                 </div>
               )}
 
-              {/* Plan name */}
+              {/* Nome do plano */}
               <div className="mb-6">
                 <h3
                   style={{
-                    fontFamily: 'Plus Jakarta Sans, sans-serif',
+                    fontFamily: 'Sora, sans-serif',
                     fontSize: '22px',
                     fontWeight: 700,
                     color: plan.featured ? '#FF2DA3' : '#F8FAFC',
@@ -156,28 +157,28 @@ export function PlanosSection() {
                 >
                   {plan.name}
                 </h3>
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', color: '#9CA3AF', lineHeight: 1.5 }}>
+                <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '14px', color: '#9CA3AF', lineHeight: 1.5 }}>
                   {plan.subtitle}
                 </p>
               </div>
 
-              {/* Price */}
+              {/* Preço */}
               <div className="mb-8 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
                 <div
                   className="text-3xl font-bold mb-1"
                   style={{
-                    fontFamily: 'Plus Jakarta Sans, sans-serif',
+                    fontFamily: 'Sora, sans-serif',
                     color: plan.featured ? '#F8FAFC' : '#E5E7EB',
                   }}
                 >
                   {plan.price}
                 </div>
-                <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#6B7280' }}>
+                <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '13px', color: '#6B7280' }}>
                   {plan.period}
                 </div>
               </div>
 
-              {/* Features */}
+              {/* Recursos */}
               <ul className="space-y-3 flex-1 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
@@ -194,14 +195,14 @@ export function PlanosSection() {
                         strokeWidth={3}
                       />
                     </div>
-                    <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', color: '#E5E7EB', lineHeight: 1.5 }}>
+                    <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '14px', color: '#E5E7EB', lineHeight: 1.5 }}>
                       {feature}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              {/* CTA */}
+              {/* Botão de ação */}
               <a
                 href={plan.ctaHref}
                 className={plan.featured ? 'btn-primary justify-center' : 'btn-secondary justify-center'}
@@ -213,13 +214,13 @@ export function PlanosSection() {
           ))}
         </div>
 
-        {/* Footer note */}
+        {/* Nota do rodapé */}
         <p
           className={cn('text-center mt-10 text-sm animate-on-scroll delay-400', inView && 'in-view')}
-          style={{ fontFamily: 'Inter, sans-serif', color: '#6B7280' }}
+          style={{ fontFamily: 'Manrope, sans-serif', color: '#6B7280' }}
         >
-          Todos os planos incluem hospedagem por 12 meses e suporte pós-entrega.{' '}
-          <a href="https://wa.me/5500000000000" style={{ color: '#9CA3AF', textDecoration: 'underline' }}>
+          Todos os planos incluem acompanhamento contínuo para manter o site protegido e funcionando bem.{' '}
+          <a href={buildWhatsAppLink('Olá! Tenho dúvidas sobre os planos da Loja Prática e quero falar com vocês.')} style={{ color: '#9CA3AF', textDecoration: 'underline' }}>
             Dúvidas? Fale com a gente.
           </a>
         </p>
@@ -227,3 +228,5 @@ export function PlanosSection() {
     </section>
   )
 }
+
+

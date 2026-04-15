@@ -2,6 +2,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import { cn } from '../lib/utils'
 import { MetricsMockup } from './mockups/MetricsMockup'
+import { buildWhatsAppLink } from '../lib/contact'
 
 const benefits = [
   'IA para criação de conteúdo com identidade e frequência',
@@ -18,14 +19,14 @@ export function IATrafegoSection() {
       className="relative section-padding overflow-hidden"
       style={{ background: '#0A0E1A' }}
     >
-      {/* Glow */}
+      {/* Brilho */}
       <div className="glow-pink" style={{ width: '500px', height: '500px', left: '-100px', top: '50%', transform: 'translateY(-50%)' }} />
       <div className="absolute inset-0 bg-dots opacity-30" />
 
       <div className="container-inner relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Visual column (left on desktop) */}
+          {/* Coluna visual (esquerda no desktop) */}
           <div className={cn(
             'flex justify-center order-2 lg:order-1 animate-on-scroll delay-200',
             inView && 'in-view'
@@ -41,7 +42,7 @@ export function IATrafegoSection() {
               />
               <MetricsMockup />
 
-              {/* Floating AI badge */}
+              {/* Selo flutuante de IA */}
               <div
                 className="absolute -left-4 -top-4 rounded-xl px-3 py-2 flex items-center gap-2"
                 style={{
@@ -51,14 +52,14 @@ export function IATrafegoSection() {
                 }}
               >
                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#7C3AED' }} />
-                <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', color: '#E5E7EB' }}>
+                <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '12px', color: '#E5E7EB' }}>
                   IA otimizando agora
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Text column (right on desktop) */}
+          {/* Coluna de texto (direita no desktop) */}
           <div className="order-1 lg:order-2">
             <div className={cn('badge-brand mb-6 animate-on-scroll', inView && 'in-view')}>
               Marketing com IA
@@ -67,7 +68,7 @@ export function IATrafegoSection() {
             <h2
               className={cn('mb-6 animate-on-scroll delay-100', inView && 'in-view')}
               style={{
-                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontFamily: 'Sora, sans-serif',
                 fontSize: 'clamp(28px, 3.5vw, 44px)',
                 fontWeight: 700,
                 color: '#F8FAFC',
@@ -85,7 +86,7 @@ export function IATrafegoSection() {
             >
               <p
                 style={{
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'Manrope, sans-serif',
                   fontSize: '17px',
                   color: '#9CA3AF',
                   lineHeight: 1.75,
@@ -97,7 +98,7 @@ export function IATrafegoSection() {
               </p>
               <p
                 style={{
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'Manrope, sans-serif',
                   fontSize: '17px',
                   color: '#9CA3AF',
                   lineHeight: 1.75,
@@ -109,7 +110,7 @@ export function IATrafegoSection() {
               </p>
             </div>
 
-            {/* Benefits */}
+            {/* Benefícios */}
             <ul className={cn('space-y-4 mb-10 animate-on-scroll delay-300', inView && 'in-view')}>
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3">
@@ -119,7 +120,7 @@ export function IATrafegoSection() {
                   >
                     <Check size={11} style={{ color: '#7C3AED' }} strokeWidth={3} />
                   </div>
-                  <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '15px', color: '#E5E7EB', lineHeight: 1.6 }}>
+                  <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '15px', color: '#E5E7EB', lineHeight: 1.6 }}>
                     {benefit}
                   </span>
                 </li>
@@ -128,7 +129,7 @@ export function IATrafegoSection() {
 
             <div className={cn('animate-on-scroll delay-400', inView && 'in-view')}>
               <a
-                href="https://wa.me/5500000000000?text=Olá!+Quero+crescer+com+IA+no+tráfego+pago."
+                href={buildWhatsAppLink('Olá! Quero melhorar o tráfego pago da minha loja e atrair mais vendas.')}
                 className="btn-primary"
               >
                 Quero crescer com IA
@@ -141,3 +142,5 @@ export function IATrafegoSection() {
     </section>
   )
 }
+
+

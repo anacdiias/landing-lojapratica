@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { LandPlot, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import logo from '../assets/logo-lp.png'
+import { buildWhatsAppLink } from '../lib/contact'
 
 const navLinks = [
   { label: 'Serviços', href: '#servicos' },
@@ -39,7 +40,7 @@ export function Header() {
           }}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="http://www.lojapratica.com" className="flex items-center">
             <img
               src={logo}
               alt="Loja Prática"
@@ -47,44 +48,44 @@ export function Header() {
             />
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Navegação desktop */}
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm transition-colors duration-200 hover:text-white"
-                style={{ color: '#9CA3AF', fontFamily: 'Inter, sans-serif' }}
+                className="text-base md:text-lg transition-colors duration-200 hover:text-white"
+                style={{ color: '#9CA3AF', fontFamily: 'Manrope, sans-serif' }}
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* CTA */}
+          {/* Botão de ação */}
           <div className="hidden md:block">
             <a
-              href="https://wa.me/5500000000000?text=Olá!+Quero+saber+mais+sobre+a+Loja+Prática."
-              className="btn-primary text-sm"
-              style={{ padding: '10px 20px', fontSize: '14px' }}
+              href={buildWhatsAppLink('Olá! Quero saber mais sobre os serviços da Loja Prática para minha loja.')}
+              className="btn-primary text-base"
+              style={{ padding: '12px 22px', fontSize: '16px' }}
             >
               Falar no WhatsApp
             </a>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Botão hambúrguer mobile */}
           <button
             className="md:hidden p-2 rounded-lg transition-colors"
             style={{ background: 'rgba(255,255,255,0.05)' }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"
           >
-            {menuOpen ? <X size={20} color="#F8FAFC" /> : <Menu size={20} color="#F8FAFC" />}
+            {menuOpen ? <X size={24} color="#F8FAFC" /> : <Menu size={24} color="#F8FAFC" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Menu mobile */}
       {menuOpen && (
         <div
           className="md:hidden"
@@ -107,17 +108,17 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="py-3 text-sm transition-colors"
-                  style={{ color: '#E5E7EB', fontFamily: 'Inter, sans-serif', borderBottom: '1px solid rgba(255,255,255,0.05)' }}
+                  className="py-3 text-base transition-colors"
+                  style={{ color: '#E5E7EB', fontFamily: 'Manrope, sans-serif', borderBottom: '1px solid rgba(255,255,255,0.05)' }}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="https://wa.me/5500000000000"
-                className="btn-primary mt-3 justify-center"
-                style={{ fontSize: '14px', padding: '12px 20px' }}
+                href={buildWhatsAppLink('Olá! Quero saber mais sobre os serviços da Loja Prática para minha loja.')}
+                className="btn-primary mt-3 justify-center text-base"
+                style={{ fontSize: '16px', padding: '14px 22px' }}
               >
                 Falar no WhatsApp
               </a>
@@ -128,3 +129,5 @@ export function Header() {
     </header>
   )
 }
+
+
